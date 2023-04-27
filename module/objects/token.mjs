@@ -1,7 +1,7 @@
 /**
  * Extend the base Token class to implement additional system-specific logic.
  */
-export default class FalloutToken extends Token {
+export class FalloutToken extends Token {
   /** @inheritdoc */
   _drawBar(number, bar, data) {
     if (data.attribute === "health") return this._drawHPBar(number, bar, data);
