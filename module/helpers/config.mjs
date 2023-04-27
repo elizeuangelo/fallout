@@ -169,3 +169,7 @@ FALLOUT.conditions = {
 
 
 
+FALLOUT.tokenHPColors = {
+  "damage": 0xff0000,
+  "radiation": 0x550000
+};

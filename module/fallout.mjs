@@ -1,6 +1,9 @@
 // Import document classes.
 import { FalloutActor } from './documents/actor.mjs'
 import { FalloutItem } from './documents/item.mjs'
+import { FalloutTokenDocument } from './documents/token.mjs'
+// Import object classes.
+import { FalloutToken } from './objects/token.mjs'
 // Import sheet classes.
 import { FalloutActorSheet } from './sheets/actor-sheet.mjs'
 import { FalloutItemSheet } from './sheets/item-sheet.mjs'
@@ -57,8 +60,12 @@ Hooks.once('init', async function () {
   }
 
   // Define custom Document classes
-  CONFIG.Actor.documentClass = FalloutActor
-  CONFIG.Item.documentClass = FalloutItem
+  CONFIG.Actor.documentClass = FalloutActor;
+  CONFIG.Item.documentClass = FalloutItem;
+  CONFIG.Token.documentClass = FalloutTokenDocument;
+
+  // Define custom Object classes
+  CONFIG.Token.objectClass = FalloutToken;
 
   // Register custom system settings
   registerSettings()
