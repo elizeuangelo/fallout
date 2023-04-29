@@ -409,7 +409,7 @@ export class FalloutActor extends Actor {
   async modifyTokenAttribute(attribute, value, isDelta, isBar) {
     if ( attribute === "health" ) {
       const hp = this.system.health;
-      const maxHP = hp.max - this.system.radiation;
+      const maxHP = hp.max - (this.system.radiation ?? 0);
       if (value > 0) {
         if (isDelta) {
             const maxDelta = maxHP - hp.value;
