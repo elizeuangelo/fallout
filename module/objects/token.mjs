@@ -19,7 +19,7 @@ export class FalloutToken extends Token {
    */
   _drawHPBar(number, bar, data) {
     // Extract health data
-    const rad = this.actor.system.radiation;
+    const rad = this.actor.system.radiation ?? 0;
     let { value, max } = this.actor.system.health;
 
     // Differentiate between effective maximum and displayed maximum
